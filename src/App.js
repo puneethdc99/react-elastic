@@ -32,10 +32,10 @@ class App extends Component {
               <option value="data.value">{data.toString()}</option>
             ))}
           </select>
-          <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          <DropdownButton id="dropdown-basic-button" title="Select the Index">
+            {this.state.eData.map(data => (
+              <Dropdown.Item>{data.toString()}</Dropdown.Item>
+            ))}
           </DropdownButton>
         </header>
       </div>
